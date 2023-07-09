@@ -40,7 +40,7 @@ router.post("/", (req, res) => {
       ...entry,
     };
     budgetData.push(newEntry);
-    res.status(201).json({ status: true, data: newEntry });
+    res.status(201).json({ status: true, data: budgetData });
   }
 });
 
@@ -64,7 +64,7 @@ router.delete("/:id", (req, res) => {
     res.json({
       status: true,
       message: "Delete Successful",
-      data: foundEntry,
+      data: newBudgetData,
     });
   }
 });
@@ -73,7 +73,7 @@ router.put("/:id", (req, res) => {
   //   res.send("Test");
   const { id } = req.params;
 
-  console.log(req.body);
+  // console.log(req.body);
 
   let entryIndex = budgetData.findIndex((item) => item.id === id);
 
