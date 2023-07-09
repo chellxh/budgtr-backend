@@ -20,7 +20,7 @@ router.get("/:id", (req, res) => {
         "Id cannot be found. Please check the id and try again or enter a new id.",
     });
   } else {
-    res.status(304).json({ status: true, data: foundItem });
+    res.json({ status: true, data: foundItem });
   }
 });
 
