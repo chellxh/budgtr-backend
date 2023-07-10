@@ -1,2 +1,2 @@
 # budgtr-backend
-Server for Budgtr App
+Server for BagCheck App
